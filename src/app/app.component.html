@@ -1,19 +1,24 @@
 <div>1. Pure textarea</div>
-<textarea></textarea>
+<textarea placeholder="入力してください"></textarea>
 
 <div>2. ReactiveForms textarea</div>
 <ng-container [formGroup]="form">
-  <textarea formControlName="text"></textarea>
+  <textarea placeholder="入力してください" formControlName="text"></textarea>
 </ng-container>
 
 <div>3. 2 + cdkTextareaAutosize</div>
 <ng-container [formGroup]="form">
-  <textarea cdkTextareaAutosize formControlName="text"></textarea>
+  <textarea
+    placeholder="入力してください"
+    cdkTextareaAutosize
+    formControlName="text"
+  ></textarea>
 </ng-container>
 
 <div>4. 3 + cdkAutosizeMinRows</div>
 <ng-container [formGroup]="form">
   <textarea
+    placeholder="入力してください"
     cdkTextareaAutosize
     cdkAutosizeMinRows="4"
     formControlName="text"
@@ -23,20 +28,10 @@
 <div>5. 4 + inputMode</div>
 <ng-container [formGroup]="form">
   <textarea
-    cdkTextareaAutosize
-    cdkAutosizeMinRows="4"
-    formControlName="text"
-    [inputMode]="'text'"
-  ></textarea>
-</ng-container>
-
-<div>6. 5 + placeholder</div>
-<ng-container [formGroup]="form">
-  <textarea
-    cdkTextareaAutosize
-    cdkAutosizeMinRows="4"
-    formControlName="text"
     placeholder="入力してください"
+    cdkTextareaAutosize
+    cdkAutosizeMinRows="4"
+    formControlName="text"
     [inputMode]="'text'"
   ></textarea>
 </ng-container>
