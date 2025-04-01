@@ -30,4 +30,15 @@
   ></textarea>
 </ng-container>
 
+<div>6. 5 + placeholder</div>
+<ng-container [formGroup]="form">
+  <textarea
+    cdkTextareaAutosize
+    cdkAutosizeMinRows="4"
+    formControlName="text"
+    placeholder="入力してください"
+    [inputMode]="'text'"
+  ></textarea>
+</ng-container>
+
 <router-outlet />
